@@ -1,1 +1,1 @@
-from quantlib import QuantLib
+from plotr_modules.quantlib import QuantLib
