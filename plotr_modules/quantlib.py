@@ -4,7 +4,7 @@ import numpy as np
 class QuantLib:
 
     @classmethod
-    def MACD(cls, price_data:DataFrame, span_short:int=12, span_long:int=26,
+    def macd(cls, price_data:DataFrame, span_short:int=12, span_long:int=26,
              signal_span:int=9, column:str="close", adjust:bool=True,) -> DataFrame:
         """
         Moving average convergence divergence (MACD) is a trend-following momentum indicator
@@ -24,7 +24,7 @@ class QuantLib:
         return concat([macd, signal], axis=1)
     
     @classmethod
-    def RSI(cls, price_data:DataFrame, time_period:int=14) -> DataFrame:
+    def rsi(cls, price_data:DataFrame, time_period:int=14) -> DataFrame:
         """
         Relative strength index (RSI) is a momentum indicator used in technical analysis that
         measures the magnitude of recent price changes to evaluate overbought or oversold
@@ -49,7 +49,7 @@ class QuantLib:
         return df
 
     @classmethod
-    def STOCH(cls, ohlc:DataFrame, period:int=14) -> Series:
+    def stoch(cls, ohlc:DataFrame, period:int=14) -> Series:
         """Stochastic oscillator %K
          The stochastic oscillator is a momentum indicator comparing the closing price of a security
          to the range of its prices over a certain period of time.
